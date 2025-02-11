@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "247393687617",
+    "project_id": "pushnotifications-4fad4",
+    "storage_bucket": "pushnotifications-4fad4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247393687617:android:afc2b6ef54c46df1444ec0",
+        "android_client_info": {
+          "package_name": "com.example.learn_ease_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU1tF2_3J8ALugskXBa-qfS-H2qehI5Ao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
