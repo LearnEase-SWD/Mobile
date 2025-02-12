@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "796993297152",
+    "project_id": "learnease-74933",
+    "storage_bucket": "learnease-74933.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796993297152:android:7853080315e8bd7ed0b1e5",
+        "android_client_info": {
+          "package_name": "com.example.learn_ease_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796993297152-58rf9h4eaftltaan9asf6cl7ib8ntckl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.learn_ease_mobile",
+            "certificate_hash": "f2c0dfbdc15ba69a05a2e61324c37dbe79172284"
+          }
+        },
+        {
+          "client_id": "796993297152-8lv8gmj0seuuaa526r2v185665thduo0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc82grjSOJiWscs-KC-o1A49SU5gThCnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796993297152-8lv8gmj0seuuaa526r2v185665thduo0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
