@@ -11,6 +11,14 @@ android {
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
+    defaultConfig {
+        applicationId "com.example.learn_ease_mobile"
+        minSdkVersion 23 // Đảm bảo minSdkVersion là 23 hoặc cao hơn.
+        targetSdkVersion 35 // Giữ targetSdkVersion là 35 nếu cần
+        versionCode 1  // Sử dụng giá trị cụ thể cho versionCode.
+        versionName "1.0.0"
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -46,3 +54,5 @@ dependencies {
 flutter {
     source = "../.."
 }
+
+apply plugin: 'com.google.gms.google-services'

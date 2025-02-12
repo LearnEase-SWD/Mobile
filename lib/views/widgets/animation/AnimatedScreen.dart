@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'dart:math' as math; // Import thư viện math
+
 
 class AnimatedScreen extends StatefulWidget {
   const AnimatedScreen({super.key});

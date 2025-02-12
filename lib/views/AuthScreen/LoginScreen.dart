@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
+import '../../controller/authController/authController.dart';
+import '../../models/authService/authService.dart';
 import '../widgets/animation/AnimatedScreen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -8,6 +12,9 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final authService = AuthService();
+    // Tạo đối tượng AuthController với AuthService đã tạo
+    final authController = AuthController(authService: authService);
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
       body: Stack(
@@ -54,7 +61,10 @@ class LoginScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 5),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    // Gọi hàm login từ AuthController
+                    await authController.login(context);
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
                     minimumSize: const Size(double.infinity, 50),
