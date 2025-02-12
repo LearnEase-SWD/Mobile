@@ -7,14 +7,21 @@ import '../../controller/authController/authController.dart';
 import '../../models/authService/authService.dart';
 import '../widgets/animation/AnimatedScreen.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  bool _isLoading = false;
 
   @override
   Widget build(BuildContext context) {
     final authService = AuthService();
-    // Tạo đối tượng AuthController với AuthService đã tạo
     final authController = AuthController(authService: authService);
+
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
       body: Stack(
@@ -29,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                   'Welcome to My App!',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 SizedBox(
                   height: 115,
                   child: const AnimatedScreen(),
@@ -43,7 +50,8 @@ class LoginScreen extends StatelessWidget {
                         TypewriterAnimatedText(
                           'LearnEase is an online learning platform that uses '
                               'artificial intelligence (AI) to provide comprehensive study materials for exams like PTE, IELTS, TOEFL, and SAT.',
-                          textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.normal),
+                          textStyle: const TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.normal),
                           speed: const Duration(milliseconds: 100),
                         ),
                       ],
@@ -61,9 +69,16 @@ class LoginScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 5),
                 ElevatedButton(
-                  onPressed: () async {
-                    // Gọi hàm login từ AuthController
+                  onPressed: _isLoading
+                      ? null
+                      : () async {
+                    setState(() {
+                      _isLoading = true;
+                    });
                     await authController.login(context);
+                    setState(() {
+                      _isLoading = false;
+                    });
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
@@ -72,14 +87,24 @@ class LoginScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                  child: Row(
+                  child: _isLoading
+                      ? const SizedBox(
+                    width: 24,
+                    height: 24,
+                    child: CircularProgressIndicator(
+                      color: Colors.white,
+                      strokeWidth: 3,
+                    ),
+                  )
+                      : Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset('assets/google_logo.png', height: 24),
                       const SizedBox(width: 10),
                       const Text(
                         'Login with Google',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        style:
+                        TextStyle(fontSize: 18, color: Colors.white),
                       ),
                     ],
                   ),
