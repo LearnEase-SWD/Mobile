@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "796993297152",
-    "project_id": "learnease-74933",
-    "storage_bucket": "learnease-74933.firebasestorage.app"
+    "project_number": "164017668725",
+    "project_id": "learnease-d03bb",
+    "storage_bucket": "learnease-d03bb.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:796993297152:android:7853080315e8bd7ed0b1e5",
+        "mobilesdk_app_id": "1:164017668725:android:866707148971c09916ee3c",
         "android_client_info": {
           "package_name": "com.example.learn_ease_mobile"
         }
       },
       "oauth_client": [
         {
-          "client_id": "796993297152-58rf9h4eaftltaan9asf6cl7ib8ntckl.apps.googleusercontent.com",
+          "client_id": "164017668725-tdu30ete8nn5lm0qbgonmu31nn0tk3ga.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.learn_ease_mobile",
-            "certificate_hash": "f2c0dfbdc15ba69a05a2e61324c37dbe79172284"
+            "certificate_hash": "bd3a4d6e325069cb08e0dff67e0ef0c70ab9380d"
           }
         },
         {
-          "client_id": "796993297152-8lv8gmj0seuuaa526r2v185665thduo0.apps.googleusercontent.com",
+          "client_id": "164017668725-l8a4k2k55ttvr6t7cleqcl497rieitft.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBc82grjSOJiWscs-KC-o1A49SU5gThCnw"
+          "current_key": "AIzaSyBsmEOlppXxu1YE0IHnzS0Xjz_i2KGRjus"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "796993297152-8lv8gmj0seuuaa526r2v185665thduo0.apps.googleusercontent.com",
+              "client_id": "164017668725-l8a4k2k55ttvr6t7cleqcl497rieitft.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
